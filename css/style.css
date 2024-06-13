@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'Pompiere', cursive;
+}
+
+header {
+    width: 100%;
+    background-color: white; /* Fondo blanco para el header */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+    width: 100%;
+}
+
+.logo {
+    cursor: pointer;
+    max-width: 90px; /* Ancho máximo del logo */
+    min-width: 90px; /* Ancho mínimo del logo */
+}
+
+.logo img {
+    width: 100%; /* Ajuste del tamaño máximo para el logo */
+    height: auto; /* Mantener la proporción del logo */
+    min-height: 56px; /* Altura mínima del logo */
+    min-width: 90px; /* Ancho mínimo del logo */
+}
+
+.nav-container {
+    flex-grow: 1; /* Permite que el contenedor de los enlaces crezca */
+    display: flex;
+    justify-content: center; /* Centra los enlaces dentro del contenedor */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 25px; /* Espaciado mayor entre enlaces para mejor legibilidad */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    font-size: 22px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #C552CB; /* Color llamativo para el texto del menú */
+    transition: all 0.3s ease, color 0.3s ease; /* Transición suave para efectos de hover */
+}
+
+.nav-links li a:hover {
+    color: #FF69B4; /* Color más claro para el hover */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 70px 20px; /* Ajuste según la altura de la barra de navegación y agregar padding lateral */
+}
+
+button {
+    padding: 9px 25px;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: moccasin;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 412px) {
+    .nav-container {
+        display: none; /* Oculta el contenedor de enlaces de navegación en pantallas pequeñas */
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el botón del menú hamburguesa */
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Ajusta según la altura de tu header */
+        left: 0;
+        right: 0;
+        background-color: white;
+        display: none; /* Oculta los enlaces por defecto */
+        text-align: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para distinguir el menú */
+    }
+
+    .nav-links ul.active {
+        display: flex; /* Muestra los enlaces cuando se activa */
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+}

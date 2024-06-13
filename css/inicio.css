@@ -1,0 +1,20 @@
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 10px;
+    color: #555; /* Color de los iconos */
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #3b5998; /* Color al pasar el ratón (ejemplo de azul de Facebook) */
+}

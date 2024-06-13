@@ -1,0 +1,53 @@
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+details {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+details > summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+details > summary::marker {
+    color: #C552CB;
+}
+
+details > summary:hover {
+    color: #C552CB;
+}
+
+details[open] > summary {
+    color: #C552CB;
+}
+
+details details {
+    margin: 10px 0 0 20px;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+details details > summary {
+    font-weight: normal;
+    color: #555;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+p, ul {
+    margin: 10px 0;
+}
