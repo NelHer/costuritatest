@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     async function loadContent(page) {
         try {
-            const response = await fetch(`${page}.html`);
+            const response = await fetch(`../web/${page}.html`);
             if (!response.ok) {
                 throw new Error("Network response was not ok");
             }
